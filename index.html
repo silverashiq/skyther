@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>Skyther</title>
+    <link rel="stylesheet" href="./main.css" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+
+<!-- Section - 1 -->
+    <div>
+      <div class="lg:flex justify-between">
+        <div class="flex items-center">
+          <div class="w-[100vh] sm:w-[100vh] md:w-[100vh] lg:w-[720px] h-[100vh] py-1 bg-no-repeat bg-cover"  style="background-image: url(./assets/WeatherBg2b.jpg);">
+            <!-- Logo -->
+            <div class="flex justify-center p-[40px]">
+              <img class="w-[250px] " src="./assets/Logo.png" alt="Skyther">
+            </div>
+            <div class="flex justify-center items-center text-center">
+
+              <div >
+
+                
+                <div class="flex p-5 items-center">
+
+                  <!-- Search bar -->
+
+                  <input
+                    class="w-[300px] h-10 rounded-3xl px-2 relative"
+                    id="searchInput"
+                    type="search"
+                    placeholder="   Search Location"
+                  />
+                  <svg
+                    id="searchIcon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 16 16"
+                    fill="currentColor"
+                    class="size-7 absolute transform -translate-x-[-250px] opacity-50"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+
+                <!-- Weather Details -->
+
+                <div class="flex justify-center" id="weatherIcon">
+                  <img class="size-[200px]" src="./assets/7.svg" alt="Cloudy">
+                </div>
+                <h1 class="text-slate-50 text-6xl sm:text-6xl md:text-8xl lg:text-[100pt] p-2 font-normal" id="myTemp">29°C</h1>
+                <p class="text-slate-50 text-2xl" id="myDetails">Cloudy</p>
+                <div class="flex justify-center">
+                  <hr class="my-5 w-[200px]" />
+                </div>
+                <p class="text-slate-50 text-l" id="myDate">29 june 2024</p>
+                <p class="text-slate-50 text-xl my-2" id="myTime">Saturday, 08:47</p>
+                <h1 class="text-slate-50 text-4xl font-normal pt-3" id="myCountry">
+                  Dhaka, <br />Bangladesh
+                </h1>
+
+
+
+
+                <!-- Loading -->
+                <div id="loadParent">
+                  <h1 class="text-slate-400 text-2xl font-normal py-5 tracking-widest">...Loading</h1>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+<!-- Section - 2 -->
+        <div class="">
+          <div class="w-auto sm:w-auto m-auto lg:w-auto xl:w-[1180px]  h-auto sm:h-auto md:h-auto lg:h-auto xl:h-[100vh] bg-slate-100 flex justify-center items-center p-[20px] overflow-auto">
+           
+            <div>
+              <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-3    items-center justify-center gap-14">
+
+                <!-- Box-1 -->
+                <div>
+                  <div class="w-[450px] sm:w-[450px] md:w-[300px] h-[150px] bg-slate-200 rounded-[20px] flex justify-center items-center my-5 text-slate-800 shadow-lg">
+                    <div >
+                      <h1 class="text-slate-600 text-center text-xl " id="boxQ1">
+                        Wind1
+                      </h1> 
+                      <p class="text-slate-600 text-center text-3xl my-3 font-sans
+                      " id="boxA1">
+                        40km/h
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Box-2 -->
+                <div>
+                  <div class="w-[450px] sm:w-[450px] md:w-[300px] h-[150px] bg-slate-200 rounded-[20px] flex justify-center items-center my-5 text-slate-800 shadow-lg">
+                    <div >
+                      <h1 class="text-slate-600 text-center text-xl ">
+                        Wind2
+                      </h1> 
+                      <p class="text-slate-600 text-center text-3xl my-3 font-sans
+                      ">
+                        40km/h
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Box-3 -->
+                <div>
+                  <div class="w-[450px] sm:w-[450px] md:w-[300px] h-[150px] bg-slate-200 rounded-[20px] flex justify-center items-center my-5 text-slate-800 shadow-lg">
+                    <div >
+                      <h1 class="text-slate-600 text-center text-xl ">
+                        Wind3
+                      </h1> 
+                      <p class="text-slate-600 text-center text-3xl my-3 font-sans
+                      ">
+                        40km/h
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Box-4 -->
+                <div>
+                  <div class="w-[450px] sm:w-[450px] md:w-[300px] h-[150px] bg-slate-200 rounded-[20px] flex justify-center items-center my-5 text-slate-800 shadow-lg">
+                    <div >
+                      <h1 class="text-slate-600 text-center text-xl ">
+                        Wind4
+                      </h1> 
+                      <p class="text-slate-600 text-center text-3xl my-3 font-sans
+                      ">
+                        40km/h
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+
+                <!-- Box-5 -->
+                <div>
+                  <div class="w-[450px] sm:w-[450px] md:w-[300px] h-[150px] bg-slate-200 rounded-[20px] flex justify-center items-center my-5 text-slate-800 shadow-lg">
+                    <div >
+                      <h1 class="text-slate-600 text-center text-xl ">
+                        Wind5
+                      </h1> 
+                      <p class="text-slate-600 text-center text-3xl my-3 font-sans
+                      ">
+                        40km/h
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+
+
+                <!-- Box-6 -->
+                <div>
+                  <div class="w-[450px] sm:w-[450px] md:w-[300px] h-[150px] bg-slate-200 rounded-[20px] flex justify-center items-center my-5 text-slate-800 shadow-lg">
+                    <div >
+                      <h1 class="text-slate-600 text-center text-xl ">
+                        Wind6
+                      </h1> 
+                      <p class="text-slate-600 text-center text-3xl my-3 font-sans
+                      ">
+                        40km/h
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+
+
+                <!-- Box-7 -->
+                <div>
+                  <div class="w-[450px] sm:w-[450px] md:w-[300px] h-[150px] bg-slate-200 rounded-[20px] flex justify-center items-center my-5 text-slate-800 shadow-lg">
+                    <div >
+                      <h1 class="text-slate-600 text-center text-xl ">
+                        Wind7
+                      </h1> 
+                      <p class="text-slate-600 text-center text-3xl my-3 font-sans
+                      ">
+                        40km/h
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Box-8 -->
+                <div>
+                  <div class="w-[450px] sm:w-[450px] md:w-[300px] h-[150px] bg-slate-200 rounded-[20px] flex justify-center items-center my-5 text-slate-800 shadow-lg">
+                    <div >
+                      <h1 class="text-slate-600 text-center text-xl ">
+                        Wind8
+                      </h1> 
+                      <p class="text-slate-600 text-center text-3xl my-3 font-sans
+                      ">
+                        40km/h
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Box-9 -->
+                <div>
+                  <div class="w-[450px] sm:w-[450px] md:w-[300px] h-[150px] bg-slate-200 rounded-[20px] flex justify-center items-center my-5 text-slate-800 shadow-lg">
+                    <div >
+                      <h1 class="text-slate-600 text-center text-xl ">
+                        Wind9
+                      </h1> 
+                      <p class="text-slate-600 text-center text-3xl my-3 font-sans
+                      ">
+                        40km/h
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+
+                
+
+                                
+
+            </div>
+  
+  
+              </div>
+            </div>
+
+          </div>
+
+
+
+
+        </div>
+
+      <!-- Footer section Starts -->
+        <footer class="flex bg-slate-500 h-[60px] w-full items-center justify-center">
+          <p class="text-sm text-white text-center">Copyright © 2024 @SilverAshiq. All Rights Reserved.</p>
+        </footer>
+      <!-- Footer section Ends -->
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/cca8f7e301.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
