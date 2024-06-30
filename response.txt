@@ -1,0 +1,54 @@
+{
+  "coord": {
+    "lon": 90.3654,
+    "lat": 23.7279
+  },
+  "weather": [
+    {
+      "id": 721,
+      "main": "Haze",
+      "description": "haze",
+      "icon": "50d"
+    },
+    {
+      "id": 500,
+      "main": "Rain",
+      "description": "light rain",
+      "icon": "10d"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 303.2,
+    "feels_like": 310.2,
+    "temp_min": 303.2,
+    "temp_max": 303.2,
+    "pressure": 1000,
+    "humidity": 89,
+    "sea_level": 1000,
+    "grnd_level": 999
+  },
+  "visibility": 4000,
+  "wind": {
+    "speed": 5.66,
+    "deg": 160
+  },
+  "rain": {
+    "1h": 0.65
+  },
+  "clouds": {
+    "all": 75
+  },
+  "dt": 1719737873,
+  "sys": {
+    "type": 1,
+    "id": 9145,
+    "country": "BD",
+    "sunrise": 1719702882,
+    "sunset": 1719751767
+  },
+  "timezone": 21600,
+  "id": 7701342,
+  "name": "Bangshal",
+  "cod": 200
+}
