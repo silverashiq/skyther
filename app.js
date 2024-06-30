@@ -61,7 +61,6 @@ async function searchLocation(){
         showLoad();
         const apiResponse2= await fetch( `https://api.openweathermap.org/data/2.5/weather?q=${locationText}&appid=${myKey}&units=metric` );
         const apiData2=await apiResponse2.json();
-        console.log(apiData2)
         const myIcon2 = '<img class="size-[250px]" src="https://openweathermap.org/img/wn/09n@4x.png" alt="Icon" id="myIcon">'
         weatherIcon.innerHTML=myIcon2
         myTemp.innerText=Math.round(apiData2.main.temp) + "°C";
@@ -126,16 +125,6 @@ async function mainWeather(lat, long){
     myBox8.innerText=apiData.main.humidity
     myBox9.innerText=apiData.main.sea_level
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
