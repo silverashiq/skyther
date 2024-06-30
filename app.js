@@ -63,6 +63,8 @@ async function mainWeather(lat, long){
 
     const apiData = await apiResponse.json();
 
+    console.log(apiData)
+
 
     
 
@@ -84,7 +86,7 @@ async function mainWeather(lat, long){
     loadParent.classList.add('hidden');
     mainDisplay.classList.remove('hidden');
 
-    myBox1.innerText=(apiData.weather[1].main)
+    myBox1.innerText=(apiData.weather[0].main)
     myBox2.innerText=(apiData.main.temp_min)+"°C"
     myBox3.innerText=(apiData.main.temp_max)+"°C"
     myBox4.innerText=apiData.timezone
