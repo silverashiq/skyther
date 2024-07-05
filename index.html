@@ -23,7 +23,7 @@
 <!-- Section - 1 -->
     <div>
       <div class="flex flex-col lg:flex-row">
-        <div class="flex items-center">
+        <div class="flex">
           <div class="w-full lg:w-[720px] h-[100vh] py-1 bg-no-repeat bg-cover"  style="background-image: url(./assets/WeatherBg2b.jpg);">
             <!-- Logo -->
             <div class="flex justify-center p-10 lg:p-[40px]">
@@ -33,22 +33,22 @@
 
               <div >
 
-                <div class="flex p-5 items-center">
+                <div class="flex p-3 items-center">
 
                   <!-- Search bar -->
 
                   <input
-                    class="w-[300px] h-10 rounded-3xl px-2  relative"
+                    class="w-[300px] h-10 rounded-3xl px-4  relative"
                     id="searchInput"
                     type="search"
-                    placeholder="   Search Location"
+                    placeholder="Search by City Name"
                   />
                   <svg
                     id="searchBtn"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 16 16"
                     fill="currentColor"
-                    class="size-7 absolute transform -translate-x-[-250px] opacity-50 cursor-pointer"
+                    class="size-7 absolute transform -translate-x-[-240px] opacity-50 cursor-pointer"
                   >
                     <path
                       fill-rule="evenodd"
@@ -67,7 +67,7 @@
                 <div id="mainDisplay" class="hidden" >
                   <div class="flex justify-center" id="weatherIcon">
                   </div>
-                  <h1 class="text-slate-50 text-4xl md:text-6xl lg:text-8xl p-2 font-normal" id="myTemp">°C</h1>
+                  <h1 class="text-slate-50 text-4xl md:text-6xl lg:text-8xl p-2 font-normal shadow-white" id="myTemp">°C</h1>
                   <p class="text-slate-50 text-2xl md:text-3xl uppercase" id="myDetails">Details</p>
                   <div class="flex justify-center">
                     <hr class="my-5 w-[150px] md:w-[200px]" />
@@ -89,7 +89,7 @@
 
 <!-- Section - 2 -->
         <div class="flex justify-center items-center">
-          <div class="w-full xl:w-[1180px] h-auto xl:h-[100vh] bg-slate-100 flex justify-center items-center p-5 lg:p-[20px] overflow-auto">
+          <div class="w-full md:w-[550px] xl:w-[1180px] h-auto xl:h-[100vh] bg-slate-100 flex justify-center items-center p-5 lg:p-[20px] overflow-auto">
             <div>
               <div class="grid grid-cols-1 xl:grid-cols-3 gap-10 lg:gap-14">
 

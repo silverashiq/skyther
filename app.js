@@ -61,8 +61,13 @@ async function searchLocation(){
         showLoad();
         const apiResponse2= await fetch( `https://api.openweathermap.org/data/2.5/weather?q=${locationText}&appid=${myKey}&units=metric` );
         const apiData2=await apiResponse2.json();
-        const myIcon2 = '<img class="size-[250px]" src="https://openweathermap.org/img/wn/09n@4x.png" alt="Icon" id="myIcon">'
+
+        const myUrl2= " http://openweathermap.org/img/wn/"+apiData2.weather[0].icon+"@4x.png"
+
+        const myIcon2 = '<img class="size-[250px]" alt="Icon" id="myIcon2">'
         weatherIcon.innerHTML=myIcon2
+        const iconElement2=document.getElementById("myIcon2")
+        iconElement2.src=myUrl2;
         myTemp.innerText=Math.round(apiData2.main.temp) + "°C";
         myDetails.innerText=apiData2.weather[0].description
         myFeel.innerText=("Feels like - " + apiData2.main.feels_like + "°C") 
@@ -100,12 +105,13 @@ async function mainWeather(lat, long){
    
 
     // Icon URL
-    const myUrl= " http://openweathermap.org/img/wn/"+apiData.weather[0].icon+"@8x.png"
-
-
-    const myIcon = '<img class="size-[250px]" src="https://openweathermap.org/img/wn/09n@4x.png" alt="Icon" id="myIcon">'
- 
+    const myUrl= " http://openweathermap.org/img/wn/"+apiData.weather[0].icon+"@4x.png"
+    // console.log(myUrl);
+    const myIcon = '<img class="size-[250px]" alt="Icon" id="myIcon">'
+   
     weatherIcon.innerHTML=myIcon
+    const iconElement=document.getElementById("myIcon")
+    iconElement.src=myUrl;
     myTemp.innerText=Math.round(apiData.main.temp) + "°C";
     myDetails.innerText=apiData.weather[0].description
     myFeel.innerText=("Feels like - " + apiData.main.feels_like + "°C") 
@@ -140,4 +146,10 @@ if(navigator.geolocation) {
 }
 
 searchBtn.addEventListener('click', searchLocation)
+
+searchInput.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        searchLocation();
+    }
+});
 
